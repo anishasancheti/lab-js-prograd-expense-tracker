@@ -12,26 +12,27 @@
 
     <div class="container">
       <h4>Your Balance</h4>
-      <h1 id="balance">$0.00</h1>
+      <h1 >$<span id="balance">0.00</span></h1>
 
       <div class="inc-exp-container">
         <div>
           <h4>Income</h4>
-          <p id="money-plus" class="money plus">+$0.00</p>
+          <p class="money plus">+$<span id="money-plus">0.00</span></p>
         </div>
         <div>
           <h4>Expense</h4>
-          <p id="money-minus" class="money minus">-$0.00</p>
+          <p class="money minus">-$<span id="money-minus">0.00</span></p>
         </div>
       </div>
     
       <div class="histroy">
       <h3> Transaction History</h3>
       <ul id="list" class="list">
+
       </ul>
     </div>
       <h3>Add new transaction</h3>
-      <form id="form">
+      <div id="form">
         <div class="form-control">
           <label for="text">Text(max 20 letter)</label>
           <input type="text" id="text" placeholder="Enter text..." />
@@ -43,8 +44,8 @@
           >
           <input type="number" id="amount" placeholder="Enter amount..." />
         </div>
-        <button class="btn">Add transaction</button>
-      </form>
+        <button class="btn" onclick="dataDetails()">Add transaction</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
