@@ -31,12 +31,13 @@ let displayData = (key,val) => {
     document.querySelector('#money-minus').innerHTML = expenseVal;
     if (val.charAt(0) == '-') {
         let newItem = document.createElement('li');
-        newItem.textContent = key+' '+ val;
+        newItem.textContent = key+Array(50).fill('\xa0').join('')+ val;
         newItem.className = 'minus';
         document.querySelector('#list').append(newItem)
     } else {
         let newItem = document.createElement('li');
-        newItem.textContent = key+' +'+val;
+
+        newItem.textContent = key+Array(50).fill('\xa0').join('')+'+'+val;
         newItem.className = 'plus';
         document.querySelector('#list').append(newItem);
     }
